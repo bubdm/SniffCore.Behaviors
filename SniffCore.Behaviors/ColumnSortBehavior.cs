@@ -118,7 +118,7 @@ namespace SniffCore.Behaviors
             DependencyProperty.RegisterAttached("ColumnSortingBehavior", typeof(ColumnSortBehavior), typeof(ColumnSortBehavior), new UIPropertyMetadata(null));
 
         private GridViewColumnCollection _columns;
-        private bool _isSorting;
+        private WorkingIndicator _isSorting;
         private ListSortDirection _lastDirection;
         private GridViewColumn _lastSortedColumn;
         private ItemsControl _owner;
@@ -360,12 +360,13 @@ namespace SniffCore.Behaviors
 
         private void Resort()
         {
-            if (!_isSorting)
+            if (WorkingIndicator.IsActive(_isSorting))
+                return;
+
+            using (_isSorting = new WorkingIndicator())
             {
-                _isSorting = true;
                 if (_lastSortedColumn != null && !string.IsNullOrEmpty(GetSortPropertyName(_lastSortedColumn)))
                     Sort(GetSortPropertyName(_lastSortedColumn), _lastDirection);
-                _isSorting = false;
             }
         }
 

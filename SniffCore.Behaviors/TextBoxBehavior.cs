@@ -52,7 +52,7 @@ namespace SniffCore.Behaviors
         public static readonly DependencyProperty RefreshBindingOnKeyProperty =
             DependencyProperty.RegisterAttached("RefreshBindingOnKey", typeof(Key), typeof(TextBoxBehavior), new UIPropertyMetadata(OnRefreshBindingOnKeyChanged));
 
-        private bool _selfChange;
+        private WorkingIndicator _textSelecting;
 
         private TextBoxBehavior()
         {
@@ -170,16 +170,17 @@ namespace SniffCore.Behaviors
 
         private void RunSetSelectedText(TextBox textbox, object param)
         {
-            if (!_selfChange && param != null)
+            if (!WorkingIndicator.IsActive(_textSelecting) && param != null)
                 SelectText(textbox, false, param.ToString());
         }
 
         private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            _selfChange = true;
-            var textBox = (TextBox) sender;
-            SetSelectedText(textBox, textBox.SelectedText);
-            _selfChange = false;
+            using (_textSelecting = new WorkingIndicator())
+            {
+                var textBox = (TextBox) sender;
+                SetSelectedText(textBox, textBox.SelectedText);
+            }
         }
 
         private static void OnSelectAllOnFocusChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
