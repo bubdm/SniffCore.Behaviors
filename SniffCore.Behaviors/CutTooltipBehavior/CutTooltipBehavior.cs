@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
+// ReSharper disable CheckNamespace
+
 namespace SniffCore.Behaviors
 {
     /// <summary>

@@ -13,6 +13,8 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using SniffCore.Behaviors.Internal;
 
+// ReSharper disable CheckNamespace
+
 namespace SniffCore.Behaviors
 {
     /// <summary>
@@ -384,8 +386,7 @@ namespace SniffCore.Behaviors
         }
 
         /// <summary>
-        ///     Gets the command parameter from a window which is passed by the
-        ///     DW.WPFToolkit.Interactivity.WindowBehavior.LoadedCommand.
+        ///     Gets the command parameter from a window which is passed by the WindowBehavior.LoadedCommand.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
         /// <returns>The WindowBehavior.LoadedCommandParameter property value for the element.</returns>
@@ -395,8 +396,7 @@ namespace SniffCore.Behaviors
         }
 
         /// <summary>
-        ///     Attaches the command parameter from a window which is passed by the
-        ///     DW.WPFToolkit.Interactivity.WindowBehavior.LoadedCommand.
+        ///     Attaches the command parameter from a window which is passed by the WindowBehavior.LoadedCommand.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
         /// <param name="value">The needed WindowBehavior.LoadedCommandParameter value.</param>

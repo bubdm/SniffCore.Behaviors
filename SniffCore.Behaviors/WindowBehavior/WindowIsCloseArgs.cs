@@ -5,6 +5,8 @@
 
 using System;
 
+// ReSharper disable CheckNamespace
+
 namespace SniffCore.Behaviors
 {
     /// <summary>

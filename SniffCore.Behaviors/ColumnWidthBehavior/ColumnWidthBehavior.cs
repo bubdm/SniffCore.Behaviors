@@ -10,6 +10,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using SniffCore.Behaviors.Internal;
 
+// ReSharper disable CheckNamespace
+
 namespace SniffCore.Behaviors
 {
     /// <summary>

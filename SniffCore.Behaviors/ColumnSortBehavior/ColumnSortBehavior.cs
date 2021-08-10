@@ -12,6 +12,8 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using SniffCore.Behaviors.Internal;
 
+// ReSharper disable CheckNamespace
+
 namespace SniffCore.Behaviors
 {
     /// <summary>
@@ -131,7 +133,7 @@ namespace SniffCore.Behaviors
         ///     Gets the header template to be used for sorting if the column is not used for sort actually.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
-        /// <returns>The DW.WPFToolkit.Interactivity.ColumnSortBehavior.NeutralHeaderTemplate property value for the element.</returns>
+        /// <returns>The ColumnSortBehavior.NeutralHeaderTemplate property value for the element.</returns>
         public static DataTemplate GetNeutralHeaderTemplate(DependencyObject obj)
         {
             return (DataTemplate) obj.GetValue(NeutralHeaderTemplateProperty);
@@ -141,7 +143,7 @@ namespace SniffCore.Behaviors
         ///     Attaches the header template to be used for sorting if the column is not used for sort actually.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.NeutralHeaderTemplate value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.NeutralHeaderTemplate value.</param>
         public static void SetNeutralHeaderTemplate(DependencyObject obj, DataTemplate value)
         {
             obj.SetValue(NeutralHeaderTemplateProperty, value);
@@ -151,7 +153,7 @@ namespace SniffCore.Behaviors
         ///     Gets the header template to be used for sorting if the column is used for sort ascending actually.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
-        /// <returns>The DW.WPFToolkit.Interactivity.ColumnSortBehavior.AscendingSortHeaderTemplate property value for the element.</returns>
+        /// <returns>The ColumnSortBehavior.AscendingSortHeaderTemplate property value for the element.</returns>
         public static DataTemplate GetAscendingSortHeaderTemplate(DependencyObject obj)
         {
             return (DataTemplate) obj.GetValue(AscendingSortHeaderTemplateProperty);
@@ -161,7 +163,7 @@ namespace SniffCore.Behaviors
         ///     Attaches the header template to be used for sorting if the column is used for sort ascending actually.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.AscendingSortHeaderTemplate value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.AscendingSortHeaderTemplate value.</param>
         public static void SetAscendingSortHeaderTemplate(DependencyObject obj, DataTemplate value)
         {
             obj.SetValue(AscendingSortHeaderTemplateProperty, value);
@@ -172,7 +174,7 @@ namespace SniffCore.Behaviors
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
         /// <returns>
-        ///     The DW.WPFToolkit.Interactivity.ColumnSortBehavior.DescendingSortHeaderTemplate property value for the
+        ///     The ColumnSortBehavior.DescendingSortHeaderTemplate property value for the
         ///     element.
         /// </returns>
         public static DataTemplate GetDescendingSortHeaderTemplate(DependencyObject obj)
@@ -184,7 +186,7 @@ namespace SniffCore.Behaviors
         ///     Attaches the header template to be used for sorting if the column is used for sort descending actually.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.DescendingSortHeaderTemplate value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.DescendingSortHeaderTemplate value.</param>
         public static void SetDescendingSortHeaderTemplate(DependencyObject obj, DataTemplate value)
         {
             obj.SetValue(DescendingSortHeaderTemplateProperty, value);
@@ -194,7 +196,7 @@ namespace SniffCore.Behaviors
         ///     Gets the value that indicates if sorting is allowed or not.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
-        /// <returns>The DW.WPFToolkit.Interactivity.ColumnSortBehavior.AllowColumnSortings property value for the element.</returns>
+        /// <returns>The ColumnSortBehavior.AllowColumnSortings property value for the element.</returns>
         public static bool GetAllowColumnSortings(DependencyObject obj)
         {
             return (bool) obj.GetValue(AllowColumnSortingsProperty);
@@ -204,7 +206,7 @@ namespace SniffCore.Behaviors
         ///     Attaches the value if sorting is allowed or not.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.AllowColumnSortings value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.AllowColumnSortings value.</param>
         public static void SetAllowColumnSortings(DependencyObject obj, bool value)
         {
             obj.SetValue(AllowColumnSortingsProperty, value);
@@ -220,7 +222,7 @@ namespace SniffCore.Behaviors
         ///     Gets a value that indicates if a column is defined as default sort column or not.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
-        /// <returns>The DW.WPFToolkit.Interactivity.ColumnSortBehavior.IsDefaultSortColumn property value for the element.</returns>
+        /// <returns>The ColumnSortBehavior.IsDefaultSortColumn property value for the element.</returns>
         public static bool GetIsDefaultSortColumn(DependencyObject obj)
         {
             return (bool) obj.GetValue(IsDefaultSortColumnProperty);
@@ -230,7 +232,7 @@ namespace SniffCore.Behaviors
         ///     Attaches a value that indicates if a column is defined as default sort column or not.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.IsDefaultSortColumn value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.IsDefaultSortColumn value.</param>
         public static void SetIsDefaultSortColumn(DependencyObject obj, bool value)
         {
             obj.SetValue(IsDefaultSortColumnProperty, value);
@@ -240,7 +242,7 @@ namespace SniffCore.Behaviors
         ///     Gets the property name to be used for sorting.
         /// </summary>
         /// <param name="obj">The element from which the property value is read.</param>
-        /// <returns>The DW.WPFToolkit.Interactivity.ColumnSortBehavior.SortPropertyName property value for the element.</returns>
+        /// <returns>The ColumnSortBehavior.SortPropertyName property value for the element.</returns>
         public static string GetSortPropertyName(DependencyObject obj)
         {
             return (string) obj.GetValue(SortPropertyNameProperty);
@@ -250,7 +252,7 @@ namespace SniffCore.Behaviors
         ///     Attaches the property name to be used for sorting.
         /// </summary>
         /// <param name="obj">The element to which the attached property is written.</param>
-        /// <param name="value">The needed DW.WPFToolkit.Interactivity.ColumnSortBehavior.SortPropertyName value.</param>
+        /// <param name="value">The needed ColumnSortBehavior.SortPropertyName value.</param>
         public static void SetSortPropertyName(DependencyObject obj, string value)
         {
             obj.SetValue(SortPropertyNameProperty, value);

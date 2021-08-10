@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 
-namespace SniffCore.Behaviors
+namespace SniffCore.Behaviors.Internal
 {
     internal static class WindowTitleBar
     {

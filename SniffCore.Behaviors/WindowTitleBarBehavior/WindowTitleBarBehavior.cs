@@ -5,11 +5,14 @@
 
 using System;
 using System.Windows;
+using SniffCore.Behaviors.Internal;
+
+// ReSharper disable CheckNamespace
 
 namespace SniffCore.Behaviors
 {
     /// <summary>
-    ///     Brings the feature to the <see cref="System.Windows.Window" /> to disable or hide elements in the title bar.
+    ///     Brings the feature to the <see cref="Window" /> to disable or hide elements in the title bar.
     /// </summary>
     /// <example>
     ///     <code lang="XAML">
