@@ -36,7 +36,7 @@ namespace SniffCore.Behaviors
     public static class DragMoveBehavior
     {
         /// <summary>
-        ///     Identifies the <see cref="GetEnable(DependencyObject)" /> <see cref="SetEnable(DependencyObject, DataTemplate)" />
+        ///     Identifies the <see cref="GetEnable(DependencyObject)" /> <see cref="SetEnable(DependencyObject, bool)" />
         ///     attached property.
         /// </summary>
         public static readonly DependencyProperty EnableProperty =
