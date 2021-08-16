@@ -17,7 +17,7 @@
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/devicenator/SniffCore.Behaviors</RepositoryUrl>
     <AssemblyName>SniffCore.Behaviors</AssemblyName>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
